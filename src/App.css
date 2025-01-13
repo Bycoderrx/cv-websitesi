@@ -1,0 +1,255 @@
+/* Genel Ayarlar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.7;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+h1 {
+  color: #007bff;
+  font-size: 2.5rem; /* Daha büyük başlık */
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #495057;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Ana Container */
+#root {
+  width: 100%;
+  max-width: 1200px; /* Daha geniş ana container */
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-top: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+#root:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Kişisel Bilgiler */
+.personal-info {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  text-align: center; /* Yazıyı tam ortada hizaladık */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* İçeriği ortaladık */
+  justify-content: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #007bff;
+  margin-bottom: 20px; /* Resim ile metin arasına boşluk ekledik */
+}
+
+.personal-info h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.personal-info p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Diğer içeriklere dair stil ayarları */
+.personal-info .bio {
+  font-size: 1rem;
+  color: #777;
+}
+
+.personal-info br {
+  margin-bottom: 10px;
+}
+
+/* Eğitim, Deneyim, Yetenekler ve Hobiler */
+.education, .experience, .skills, .hobbies, .references {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  width: 100%; /* Kartların genişliğini tamamen ayarlıyoruz */
+  max-width: 100%; /* Kartların genişliği sayfa genişliğini aşmasın */
+  transition: all 0.3s ease;
+  text-align: left; /* Yazıyı sola yasladık */
+}
+
+.education h2, .experience h2, .skills h2, .hobbies h2, .references h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.education p, .experience p, .skills p, .hobbies p, .references p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Eğitim Bilgileri */
+.education {
+  font-size: 1.2rem;
+}
+
+.education .university,
+.education .department,
+.education .graduation-year {
+  margin-bottom: 12px;
+}
+
+/* İş Deneyimi */
+.experience {
+  font-size: 1.2rem;
+}
+
+.experience .company,
+.experience .position,
+.experience .duration {
+  margin-bottom: 12px;
+}
+
+/* Yetenekler */
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style-type: none; /* Madde işaretlerini kaldırır */
+  padding: 0;            /* İçerik etrafındaki boşlukları kaldırır */
+  margin: 0;             /* Dış boşlukları sıfırlar */
+  text-align: left; /* Sola yaslanacak */
+}
+
+.skills li {
+  background-color: #e9ecef;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.skills li:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hobiler ve İlgi Alanları */
+.hobbies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style-type: none; /* Madde işaretlerini kaldırır */
+  padding: 0;            /* İçerik etrafındaki boşlukları kaldırır */
+  margin: 0;             /* Dış boşlukları sıfırlar */
+  text-align: left; /* Sola yaslanacak */
+}
+
+.hobbies li {
+  background-color: #e9ecef;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.hobbies li:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Referanslar */
+.references {
+  font-size: 1.2rem;
+}
+
+.references p {
+  margin-bottom: 10px;
+}
+
+/* Sosyal Linkler */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.social-links a {
+  font-size: 2.5rem;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+  transform: scale(1.2);
+}
+
+/* Küçük ekranlar için responsive düzen */
+@media (max-width: 768px) {
+  #root {
+    padding: 20px;
+  }
+
+  .personal-info img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .skills ul, .hobbies ul {
+    flex-direction: column;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,118 @@
+/* Genel Ayarlar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Sayfa İçeriği */
+#root {
+  width: 100%;
+  max-width: 1200px; /* Ekranı gereksiz yere genişletmeyelim */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  padding: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Başlık Stili */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Paragraf ve Genel Yazı */
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Flex Düzeni */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Bileşenler arasına boşluk ekler */
+  justify-content: center;
+}
+
+/* Kart Görünümü */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 30%; /* Esnek büyüme, 30% genişlik */
+  min-width: 280px; /* Kartların çok küçük olmasını engeller */
+  max-width: 350px; /* Kartların fazla geniş olmasını engeller */
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Buton ve Link Stilleri */
+button, .btn-link {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive (Mobil Uyumluluk) */
+@media (max-width: 768px) {
+  #root {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 80%; /* Kartları daha büyük yapalım */
+    max-width: 90%;
+  }
+}
